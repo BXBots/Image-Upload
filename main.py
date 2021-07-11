@@ -89,7 +89,7 @@ async def send_msg(user_id, message):
 @Mo_tech_yt.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(client, message):
     await message.reply_text(
-        f"<b>Hai {message.from_user.mention}</b>\n\n<b>`I'm a simple Telegraph Uploader bot`.`I can convert under 5MB media or file to telegra.ph links`.\n\n👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://telegram.me/BX_Botz)</b>",
+        f"<b>Hai {message.from_user.mention}\n\n<b>`I'm a simple Telegraph Uploader bot`.`I can convert under 5MB media or file to telegra.ph links`.\n\n👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://telegram.me/BX_Botz)",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -110,7 +110,7 @@ async def start(client, message):
 @Mo_tech_yt.on_message(filters.command("help"))
 async def help(client, message):
    await message.reply_text(
-       "<b>🖐️Hey.. It's not that complicated\n\n👇Follow These steps..!👇\n\n🔻Send any Image, Gif or Video(Mp4 oNly) below 5MB\n\n🔻Wait for the link to get generated\n\n🤔Any Doubt :- @Mo_Tech_Group</b>",
+       "➠ `Just give me a media under 5MB`\n\n➠ `Then I will download it`\n\n➠ `I will then upload it to the telegra.ph link`",
        reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -246,8 +246,8 @@ async def about_meh(_, query):
 async def help_meh(_, query):
     buttons = [
         [
-           InlineKeyboardButton("📣Channel", url="https://telegram.dog/Mo_Tech_Group"),
-           InlineKeyboardButton("👥Group", url="https://telegram.dog/Mo_Tech_YT"),
+           InlineKeyboardButton("📣Channel", url="https://telegram.dog/BX_Botz"),
+           InlineKeyboardButton("👥Group", url="https://telegram.dog/BxSupport"),
            InlineKeyboardButton("💡Bot List", url="https://t.me/BX_Botz/31")
         ],
         [
