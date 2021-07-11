@@ -248,7 +248,7 @@ async def help_meh(_, query):
         [
            InlineKeyboardButton("📣Channel", url="https://telegram.dog/Mo_Tech_Group"),
            InlineKeyboardButton("👥Group", url="https://telegram.dog/Mo_Tech_YT"),
-           InlineKeyboardButton("💡Bot List", url="https://github.com/PR0FESS0R-99/Image-Upload")
+           InlineKeyboardButton("💡Bot List", url="https://t.me/BX_Botz/31")
         ],
         [
            InlineKeyboardButton("⚙️About", callback_data="about"),
