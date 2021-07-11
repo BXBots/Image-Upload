@@ -36,50 +36,38 @@ if Credentials.HOME_MSG:
     home_text = Credentials.HOME_MSG
 else:
     home_text = """
-👋**Hello [{}](tg://user?id={})**
+Hai [{}](tg://user?id={})
 
-**I'm a simple Telegraph Uploader bot💯**
+`I'm a simple Telegraph Uploader bot`.`I can convert under 5MB media or file to telegra.ph links`.
 
-**Ican convert gif, image or video(Mp4only) into telegra.ph links**
-
-**Click help for more details...**
-
-**You must subscribe our channel in order to use me😇****
+👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://telegram.me/BX_Botz)
 """
 about_text = None
 if Credentials.ABOUT_MSG:
     about_text = Credentials.ABOUT_MSG
 else:
     about_text = """
-**🤖 Name :** **TelegrPh**
+➠ **Bot** : Telegraph Uploader
 
-**👨‍💼 Creator : @Mo_Tech_YT**
+➠ **Creator** : [ᴍʜᴅ ᴍᴜꜰᴀz](https://telegram.me/Mufaz123)
 
-**📣 Language :** `Python3`
+➠ **Channel** : @BX_Botz
 
-**📚 Library :** [📃Pyrogram](https://docs.pyrogram.org/)
+➠ **Source** : [Click here](https://t.me/nokiyirunnoippokitum)
 
-**📢 Updates :** **@Mo_Tech_YT**
+➠ **Language** : [Python](https://python.org/)
 
-**🗣️ Group :** **@Mo_Tech_Group**
+➠ **Library** : [Pyrogram v1.2.0](https://pyrogram.org/)
 
-**🔻 YouTube : [Subscriber Now YouTube](https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ)**
-
-**✳️ Source : [🤪Click Here](https://github.com/PR0FESS0R-99/Image-Upload)**
+➠ **Server** : [Heroku](https://heroku.com/)
 """
 if Credentials.HOME_MSG:
     help_text = Credentials.HELP_MSG
 else:
     help_text = """
-**🖐️Hey.. It's not that complicated**
-
-**👇Follow These steps..!👇**
-
-**🔻Send any Image, Gif or Video(Mp4 oNly) below 5MB**
-
-**🔻Wait for the link to get generated**
-
-**🤔Any Doubt :- @Mo_Tech_Group**
+➠ `Just give me a media under 5MB`
+➠ `Then I will download it`
+➠ `I will then upload it to the telegra.ph link`
 """
 async def send_msg(user_id, message):
     try:
@@ -101,17 +89,16 @@ async def send_msg(user_id, message):
 @Mo_tech_yt.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(client, message):
     await message.reply_text(
-        f"<b>👋Hello {message.from_user.mention}</b>\n\n<b>I'm a simple Telegraph Uploader bot💯\n\nI can convert gif, image or video(Mp4only) into telegra.ph links\n\nYou must subscribe our YouTube Channel😇</b>",
+        f"<b>Hai {message.from_user.mention}</b>\n\n<b>`I'm a simple Telegraph Uploader bot`.`I can convert under 5MB media or file to telegra.ph links`.\n\n👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://telegram.me/BX_Botz)</b>",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🗣️Group", url="https://telegram.dog/Mo_Tech_Group"),
-                    InlineKeyboardButton("📃Bot List", url="https://telegram.dog/Mo_Tech_YT"),
-                    InlineKeyboardButton("✳️Source", url="https://github.com/PR0FESS0R-99/Image-Upload")
+                    InlineKeyboardButton("🤖Bot Updates", url="https://telegram.dog/BX_Botz"),
+                    InlineKeyboardButton("👥Support Group", url="https://telegram.dog/BxSupport")
                 ],
                 [
-                    InlineKeyboardButton("🙏Help", callback_data="help"),
-                    InlineKeyboardButton("👨‍💼About", callback_data="about")
+                    InlineKeyboardButton("⚙️Help", callback_data="help"),
+                    InlineKeyboardButton("🔰About", callback_data="about")
                 ]
             ]
         ),
@@ -127,13 +114,12 @@ async def help(client, message):
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🗣️Group", url="https://telegram.dog/Mo_Tech_Group"),
-                    InlineKeyboardButton("📃Bot List", url="https://telegram.dog/Mo_Tech_YT"),
-                    InlineKeyboardButton("✳️Source", url="https://github.com/PR0FESS0R-99/Image-Upload")
+                    InlineKeyboardButton("🤖Bot Updates", url="https://telegram.dog/BX_Botz"),
+                    InlineKeyboardButton("👥Support Group", url="https://telegram.dog/BxSupport")
                 ],
                 [
                     InlineKeyboardButton("🏠Home", callback_data="home"),
-                    InlineKeyboardButton("👨‍💼About", callback_data="about")
+                    InlineKeyboardButton("🔰About", callback_data="about")
                 ]
             ]
         ),
@@ -243,12 +229,7 @@ def dynamic_data_filter(data):
 async def about_meh(_, query):
     buttons = [
         [
-           InlineKeyboardButton("🗣️Group", url="https://telegram.dog/Mo_Tech_Group"),
-           InlineKeyboardButton("📃Bot List", url="https://telegram.dog/Mo_Tech_YT"),
-           InlineKeyboardButton("✳️Source", url="https://github.com/PR0FESS0R-99/Image-Upload")
-        ],
-        [
-           InlineKeyboardButton("🙏Help", callback_data="help"),
+           InlineKeyboardButton("⚙️Help", callback_data="help"),
            InlineKeyboardButton("🏠Home", callback_data="home"),
            InlineKeyboardButton("🔐Close", callback_data="closeit")
         ]
@@ -265,12 +246,12 @@ async def about_meh(_, query):
 async def help_meh(_, query):
     buttons = [
         [
-           InlineKeyboardButton("🗣️Group", url="https://telegram.dog/Mo_Tech_Group"),
-           InlineKeyboardButton("📃Bot List", url="https://telegram.dog/Mo_Tech_YT"),
-           InlineKeyboardButton("✳️Source", url="https://github.com/PR0FESS0R-99/Image-Upload")
+           InlineKeyboardButton("📣Channel", url="https://telegram.dog/Mo_Tech_Group"),
+           InlineKeyboardButton("👥Group", url="https://telegram.dog/Mo_Tech_YT"),
+           InlineKeyboardButton("💡Bot List", url="https://github.com/PR0FESS0R-99/Image-Upload")
         ],
         [
-           InlineKeyboardButton("👨‍💼About", callback_data="about"),
+           InlineKeyboardButton("⚙️About", callback_data="about"),
            InlineKeyboardButton("🏠Home", callback_data="home"),
            InlineKeyboardButton("🔐Close", callback_data="closeit")
         ]
@@ -287,14 +268,12 @@ async def help_meh(_, query):
 async def go_to_home(_, query):
     buttons = [
         [
-           InlineKeyboardButton("🗣️Group", url="https://telegram.dog/Mo_Tech_Group"),
-           InlineKeyboardButton("📃Bot List", url="https://telegram.dog/Mo_Tech_YT"),
-           InlineKeyboardButton("✳️Source", url="https://github.com/PR0FESS0R-99/Image-Upload")
-        ],
-        [
-           InlineKeyboardButton("🙏Help", callback_data="help"),
-           InlineKeyboardButton("👨‍💼About", callback_data="about"),
-           InlineKeyboardButton("🔐Close", callback_data="closeit")
+                    InlineKeyboardButton("🤖 Bot Updates", url="https://telegram.dog/BX_Botz"),
+                    InlineKeyboardButton("👥Support Group", url="https://telegram.dog/BxSupport")
+                ],
+                [
+                    InlineKeyboardButton("⚙️Help", callback_data="help"),
+                    InlineKeyboardButton("🔰About", callback_data="about")
         ]
     ]
     await query.message.edit(
