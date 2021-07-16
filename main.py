@@ -89,7 +89,7 @@ async def send_msg(user_id, message):
 @Mo_tech_yt.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(client, message):
     await message.reply_text(
-        f"{HOME_MSG},
+        f"{HOME.MSG},
         reply_markup=InlineKeyboardMarkup(
             [
                 [
