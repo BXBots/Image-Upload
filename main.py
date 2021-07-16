@@ -88,7 +88,8 @@ async def send_msg(user_id, message):
 ## --- Start Handler --- ##
 @Mo_tech_yt.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(client, message):
-    await message.reply_text(Hai [{}](tg://user?id={})<b>\n\n`I'm a simple Telegraph Uploader bot`.`I can convert under 5MB media or file to telegra.ph links`.\n\n👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://telegram.me/BX_Botz),
+    await message.reply_text(
+        f"Hai [{}](tg://user?id={})<b>\n\n`I'm a simple Telegraph Uploader bot`.`I can convert under 5MB media or file to telegra.ph links`.\n\n👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://telegram.me/BX_Botz),
         reply_markup=InlineKeyboardMarkup(
             [
                 [
